@@ -13,6 +13,9 @@ spring:
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.MySQLDialect
+  redis:
+    host: 192.168.31.128
+    port: 6379
 server:
   port: 8081
 env: test
