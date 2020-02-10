@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: user
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: zhangfan@07171074
+    url: jdbc:mysql://192.168.31.90/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  rabbitmq:
+    host: 192.168.31.90
+    port: 5672
+    username: admin
+    password: admin
+  redis:
+    host: 192.168.31.90
+    port: 6379
+    password: zxcv123bnm
+server:
+  port: 8100
+env: dev
