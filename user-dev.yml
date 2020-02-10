@@ -23,5 +23,5 @@ spring:
     port: 6379
     password: zxcv123bnm
 server:
-  port: 8100
+  port: 8007
 env: dev
