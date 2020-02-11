@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8089
+
+#配置路由的规则
+zuul:
+  routes:
+    myproduct:
+      path: /myproduct/**
+      serviceId: product
+  ignored-patterns:
+    - /product/product/listForOrder
+    - /myproduct/product/listForOrder
+#关闭所有敏感头
+  sensitive-headers:
+env: dev
